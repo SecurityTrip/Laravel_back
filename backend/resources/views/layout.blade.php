@@ -27,12 +27,14 @@
             }
         }
 
+        @yield('style')
 
     </style>
 
-    <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/navbar.css">
 </head>
-<body class="">
+<body>>
 <header>
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -51,12 +53,12 @@
                     </li>
                     <li class="nav-item">
 
-                        <a class="nav-link" href="#" tabindex="-1">Профиль</a>
+                        <a class="nav-link" href="/login" tabindex="-1">Профиль</a>
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Поиск</button>
                 </form>
             </div>
         </div>

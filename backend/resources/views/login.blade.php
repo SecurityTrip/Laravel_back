@@ -1,13 +1,54 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layout')
 
-</body>
-</html>
+@section('style')
+
+
+@endsection
+
+
+@section('content')
+    <div class="text-center">
+    <div class="row align-items-start">
+        <div class="col">
+        </div>
+        <div class="col">
+            <div class="container" style="margin-top: 5%">
+                <main class="form-signin">
+                    <form>
+                        <img class="mb-4" src="../../public/" alt="" width="72" height="57">
+                        <h1 class="h3 mb-3 fw-normal">Вход</h1>
+
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating" style="margin-top: 7px">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Пароль</label>
+                        </div>
+
+                        <div class="checkbox mb-3" style="margin-top: 10px">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Запомнить меня
+                            </label>
+                        </div>
+                        <div style="margin-bottom: 7px">
+                            <label for="">Ещё не зарегисртрованны?</label>
+                            <a href="registration">Зарегистрироваться</a>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-outline-success" type="submit">Войти</button>
+                        <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+                    </form>
+                </main>
+            </div>
+
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+    </div>
+
+
+
+@endsection

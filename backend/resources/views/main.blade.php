@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title')Главная@endsection
+
 @section('content')
     <div class="container" style="padding-top: 2%">
         <!-- Begin page content -->

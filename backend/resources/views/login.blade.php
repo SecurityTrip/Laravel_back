@@ -1,9 +1,6 @@
 @extends('layout')
 
-@section('style')
-
-
-@endsection
+@section('title')Вход@endsection
 
 
 @section('content')
@@ -14,16 +11,17 @@
         <div class="col">
             <div class="container" style="margin-top: 5%">
                 <main class="form-signin">
-                    <form>
+                    <form method="post" action="/login/check">
+                        @csrf
                         <img class="mb-4" src="../../public/" alt="" width="72" height="57">
                         <h1 class="h3 mb-3 fw-normal">Вход</h1>
 
                         <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">Email</label>
                         </div>
                         <div class="form-floating" style="margin-top: 7px">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="********">
                             <label for="floatingPassword">Пароль</label>
                         </div>
 

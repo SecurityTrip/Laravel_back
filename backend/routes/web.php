@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,15 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
-Route::get('/login', function (){
-    return view('login');
-});
-Route::get('/registration', function (){
-    return view('registration');
-});
-Route::get('/{id}',function ($id){
-   return 'Profile ID: '. $id;
-});
+Route::get('/', [Controllers\MainController::class, 'main']);
+Route::get('/login', [Controllers\AuthController::class,'login']);
+Route::get('/registration', [Controllers\AuthController::class,'registration']);
+Route::post('/login/check', [Controllers\AuthController::class, 'customLogin']);
+Route::post('/registration/check', [Controllers\AuthController::class, 'customRegistration']);
+
+Route::get('/user/{id}',function ($id){ return 'Profile ID: '. $id; });
+

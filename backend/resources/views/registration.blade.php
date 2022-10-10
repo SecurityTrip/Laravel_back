@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title')Регистрация@endsection
+
 @section('content')
 
     <section class="vh-100 gradient-custom">
@@ -9,22 +11,22 @@
                     <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Регистриция</h3>
-                            <form>
-
+                            <form method="post" action="/registration/check">
+                                @csrf
                                 <div class="row">
                                     <div class="col-md-6 mb-4">
 
                                         <div class="form-outline">
-                                            <input type="text" id="firstName" class="form-control form-control-lg" />
-                                            <label class="form-label" for="firstName">Логин</label>
+                                            <input type="text" id="username" class="form-control form-control-lg" />
+                                            <label class="form-label"  for="username">Логин</label>
                                         </div>
 
                                     </div>
                                     <div class="col-md-6 mb-4">
 
                                         <div class="form-outline">
-                                            <input type="text" id="lastName" class="form-control form-control-lg" />
-                                            <label class="form-label" for="lastName">Email</label>
+                                            <input type="text" id="email" class="form-control form-control-lg" />
+                                            <label class="form-label" for="email">Email</label>
                                         </div>
 
                                     </div>
@@ -34,16 +36,16 @@
                                     <div class="col-md-6 mb-4 pb-2">
 
                                         <div class="form-outline">
-                                            <input type="email" id="emailAddress" class="form-control form-control-lg" />
-                                            <label class="form-label" for="emailAddress">Пароль</label>
+                                            <input type="email" id="password1" class="form-control form-control-lg" />
+                                            <label class="form-label" for="password1">Пароль</label>
                                         </div>
 
                                     </div>
                                     <div class="col-md-6 mb-4 pb-2">
 
                                         <div class="form-outline">
-                                            <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
-                                            <label class="form-label" for="phoneNumber">Повторите пароль</label>
+                                            <input type="tel" id="password2" class="form-control form-control-lg" />
+                                            <label class="form-label" for="password2">Повторите пароль</label>
                                         </div>
 
                                     </div>
